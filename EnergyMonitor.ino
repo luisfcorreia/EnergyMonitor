@@ -9,32 +9,12 @@
 
 const char* ssid = "...";
 const char* password = "...";
-const char* host = "emoncms.org";
+//const char* host = "emoncms.org";
 const int   httpPort = 80;
 const char* emoncmsKey = "...";   //emoncms.org write API key
 const char* node = "1";           //This should be an integer
 const int   Vrms = 230;
-
-/************** NodeMCU v1.0 ******************/
-
-#define SELPIN D8    //CS
-#define DATAOUT D7   //MOSI
-#define DATAIN D6    //MISO
-#define SPICLOCK D5  //SCLK
-
-/*************** ESP8266-01 *******************/
-
-/*
-
-// bitbanging all the way
-// reusing TX RX pins as GPIO
-#define SELPIN 0    //CS
-#define DATAOUT 1   //MOSI
-#define DATAIN 3    //MISO
-#define SPICLOCK 2  //SCLK
-
-*/
-
+  
 MCP3208 adc(SPICLOCK,DATAOUT,DATAIN,SELPIN);
 EnergyMonitor emon1, emon2, emon3;
 
